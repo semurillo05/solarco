@@ -1,0 +1,5 @@
+# PDFs - no se suben al repositorio
+*.pdf
+
+# Archivo de metodología personal
+ai_guidelines.md
