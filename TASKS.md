@@ -36,10 +36,10 @@
 
 | # | Tarea | Prioridad | Complejidad | Criterio de finalización |
 |---|---|---|---|---|
-| 1.1.1 | `[ ]` Verificar que XAMPP esté corriendo (Apache + MySQL activos) | 🔴 Alta | ⚙️ Baja | `http://localhost` responde en el navegador |
-| 1.1.2 | `[ ]` Confirmar que la carpeta del proyecto es `c:\laragon\www\web_17\` | 🔴 Alta | ⚙️ Baja | El proyecto abre en `http://localhost/web_17/` |
-| 1.1.3 | `[ ]` Crear repositorio en GitHub (o verificar que ya existe) | 🔴 Alta | ⚙️ Baja | URL del repo compartida con todo el equipo |
-| 1.1.4 | `[ ]` Hacer el primer commit con `BLUEPRINT.md` y `TASKS.md` | 🟡 Media | ⚙️ Baja | Archivos visibles en GitHub |
+| 1.1.1 | `[x]` Verificar que XAMPP esté corriendo (Apache + MySQL activos) | 🔴 Alta | ⚙️ Baja | `http://localhost` responde en el navegador |
+| 1.1.2 | `[x]` Confirmar que la carpeta del proyecto es `c:\laragon\www\solarco\` | 🔴 Alta | ⚙️ Baja | El proyecto abre en `http://localhost/solarco/` |
+| 1.1.3 | `[x]` Crear repositorio en GitHub (o verificar que ya existe) | 🔴 Alta | ⚙️ Baja | URL del repo compartida con todo el equipo |
+| 1.1.4 | `[x]` Hacer el primer commit con `BLUEPRINT.md` y `TASKS.md` | 🟡 Media | ⚙️ Baja | Archivos visibles en GitHub |
 
 ---
 
@@ -47,11 +47,11 @@
 
 | # | Tarea | Prioridad | Complejidad | Criterio de finalización | Dependencia |
 |---|---|---|---|---|---|
-| 1.2.1 | `[ ]` Abrir phpMyAdmin en `http://localhost/phpmyadmin` | 🔴 Alta | ⚙️ Baja | phpMyAdmin carga correctamente | 1.1.1 |
-| 1.2.2 | `[ ]` Crear la base de datos llamada exactamente `solarco` con charset `utf8` | 🔴 Alta | ⚙️ Baja | BD aparece en el panel izquierdo de phpMyAdmin | 1.2.1 |
-| 1.2.3 | `[ ]` Ejecutar el script SQL del `BLUEPRINT.md` (sección 4.3) para crear las 3 tablas | 🔴 Alta | ⚙️ Baja | Tablas `usuario`, `proyecto`, `comentario` creadas con todas sus columnas | 1.2.2 |
-| 1.2.4 | `[ ]` Insertar los datos de prueba del script SQL (INSERT INTO) | 🔴 Alta | ⚙️ Baja | phpMyAdmin muestra 1 usuario, 4 proyectos y 2 comentarios | 1.2.3 |
-| 1.2.5 | `[ ]` Verificar las llaves foráneas en el diagrama de phpMyAdmin | 🟡 Media | ⚙️ Baja | Las relaciones aparecen correctas en la vista de diseño | 1.2.4 |
+| 1.2.1 | `[x]` Abrir phpMyAdmin en `http://localhost/phpmyadmin` | 🔴 Alta | ⚙️ Baja | phpMyAdmin carga correctamente | 1.1.1 |
+| 1.2.2 | `[x]` Crear la base de datos llamada exactamente `solarco` con charset `utf8` | 🔴 Alta | ⚙️ Baja | BD aparece en el panel izquierdo de phpMyAdmin | 1.2.1 |
+| 1.2.3 | `[x]` Ejecutar el script SQL del `BLUEPRINT.md` (sección 4.3) para crear las 3 tablas | 🔴 Alta | ⚙️ Baja | Tablas `usuario`, `proyecto`, `comentario` creadas con todas sus columnas | 1.2.2 |
+| 1.2.4 | `[x]` Insertar los datos de prueba del script SQL (INSERT INTO) | 🔴 Alta | ⚙️ Baja | phpMyAdmin muestra 1 usuario, 4 proyectos y 2 comentarios | 1.2.3 |
+| 1.2.5 | `[x]` Verificar las llaves foráneas en el diagrama de phpMyAdmin | 🟡 Media | ⚙️ Baja | Las relaciones aparecen correctas en la vista de diseño | 1.2.4 |
 
 **✅ Definition of Done — Fase 1:**
 - XAMPP corriendo sin errores.
@@ -71,8 +71,8 @@
 
 | # | Tarea | Prioridad | Complejidad | Criterio de finalización | Dependencia |
 |---|---|---|---|---|---|
-| 2.1.1 | `[ ]` Crear carpeta `config/` en la raíz del proyecto | 🔴 Alta | ⚙️ Baja | Carpeta existe en `web_17/config/` | 1.2.2 |
-| 2.1.2 | `[ ]` Crear `config/db.php` con conexión PDO a `solarco` | 🔴 Alta | ⚙️ Baja | El archivo no lanza errores al incluirse con `require` | 2.1.1 |
+| 2.1.1 | `[x]` Crear carpeta `config/` en la raíz del proyecto | 🔴 Alta | ⚙️ Baja | Carpeta existe en `solarco/config/` | 1.2.2 |
+| 2.1.2 | `[x]` Crear `config/db.php` con conexión PDO a `solarco` | 🔴 Alta | ⚙️ Baja | El archivo no lanza errores al incluirse con `require` | 2.1.1 |
 
 **Código esperado de `config/db.php`:**
 ```php
