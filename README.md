@@ -6,10 +6,10 @@ SolarCO es una solución web informativa y de gestión diseñada para empresas d
 ---
 
 ## 👥 Estructura del Equipo de Desarrollo
-- **Sergio:** Configuración de entorno, base de datos (`config/db.php`), autenticación de usuarios (`login.php`, `logout.php`), y control de acciones.
-- **Integrante B:** Módulo de administración y gestión del CRUD de proyectos (`proyectos.php`).
-- **Integrante C:** Diseño estético global (`css/style.css`), página de inicio (`index.php`) y sección informativa (`energia-solar.php`).
-- **Integrante D (Johan):** Formulario de contacto con persistencia PDO (`contacto.php`), validaciones dinámicas en JS puro (`js/script.js`), panel interactivo en HTML5 Canvas (`estadisticas.php`), y documentación técnica.
+- **Sergio Murillo:** Configuración de entorno, base de datos (`config/db.php`), autenticación de usuarios (`login.php`, `logout.php`), y control de acciones.
+- **Isaac Posada:** Módulo de administración y gestión del CRUD de proyectos (`proyectos.php`).
+- **Johnnathan Monsalve:** Diseño estético global (`css/style.css`), página de inicio (`index.php`) y sección informativa (`energia-solar.php`).
+- **Johan Villalba:** Formulario de contacto con persistencia PDO (`contacto.php`), validaciones dinámicas en JS puro (`js/script.js`), panel interactivo en HTML5 Canvas (`estadisticas.php`), y documentación técnica.
 
 ---
 

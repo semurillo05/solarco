@@ -1,7 +1,7 @@
 <?php
 /**
  * SolarCO - Panel de Estadísticas Completo (Módulo 3.3)
- * Desarrollado por: Integrante D (Johan)
+ * Desarrollado por: Johan Villalba
  * Fecha: Junio 2026
  */
 ?>

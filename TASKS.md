@@ -190,9 +190,9 @@ Referencia visual: `imgs_project/3.png`
 | # | Tarea | Prioridad | Complejidad | Criterio de finalización | Dependencia |
 |---|---|---|---|---|---|
 | 4.1.1 | `[ ]` Crear formulario de login en `index.php` (email + password) referenciando `login.php` | 🔴 Alta | ⚙️ Media | El formulario tiene `action="login.php" method="POST"` | 3.1.6 |
-| 4.1.2 | `[ ]` Crear `login.php` que procese el POST y consulte la BD con PDO | 🔴 Alta | ⚙️⚙️ Media | El archivo existe y no tiene errores de sintaxis | 2.1.2 |
-| 4.1.3 | `[ ]` Implementar lógica: si credenciales correctas → `$_SESSION` → redirigir a `proyectos.php` | 🔴 Alta | ⚙️⚙️ Media | El login con `admin@solarco.com / admin123` redirige correctamente | 4.1.2 |
-| 4.1.4 | `[ ]` Implementar lógica: si credenciales incorrectas → redirigir a `index.php?error=1` | 🔴 Alta | ⚙️ Baja | Un login erróneo muestra mensaje de error visible en pantalla | 4.1.3 |
+| 4.1.2 | `[x]` Crear `login.php` que procese el POST y consulte la BD con PDO | 🔴 Alta | ⚙️⚙️ Media | El archivo existe y no tiene errores de sintaxis | 2.1.2 |
+| 4.1.3 | `[x]` Implementar lógica: si credenciales correctas → `$_SESSION` → redirigir a `proyectos.php` | 🔴 Alta | ⚙️⚙️ Media | El login con `admin@solarco.com / admin123` redirige correctamente | 4.1.2 |
+| 4.1.4 | `[x]` Implementar lógica: si credenciales incorrectas → redirigir a `index.php?error=1` | 🔴 Alta | ⚙️ Baja | Un login erróneo muestra mensaje de error visible en pantalla | 4.1.3 |
 
 ---
 
@@ -200,7 +200,7 @@ Referencia visual: `imgs_project/3.png`
 
 | # | Tarea | Prioridad | Complejidad | Criterio de finalización | Dependencia |
 |---|---|---|---|---|---|
-| 4.2.1 | `[ ]` Crear `logout.php` con `session_start()`, `session_destroy()` y redirección a `index.php` | 🔴 Alta | ⚙️ Baja | Al acceder a `logout.php`, la sesión se destruye y el usuario vuelve al inicio | 4.1.3 |
+| 4.2.1 | `[x]` Crear `logout.php` con `session_start()`, `session_destroy()` y redirección a `index.php` | 🔴 Alta | ⚙️ Baja | Al acceder a `logout.php`, la sesión se destruye y el usuario vuelve al inicio | 4.1.3 |
 | 4.2.2 | `[ ]` Agregar enlace "Cerrar Sesión" en el navbar (visible solo cuando hay sesión activa) | 🟡 Media | ⚙️ Media | El navbar muestra "Cerrar Sesión" tras login y "Iniciar Sesión" si no hay sesión | 4.2.1 |
 
 **✅ Definition of Done — Fase 4:**
@@ -215,7 +215,7 @@ Referencia visual: `imgs_project/3.png`
 
 > **Objetivo:** Implementar el CRUD completo de la tabla `proyecto`. Esta fase cumple el requisito principal de la entrega 3.  
 > **Dependencia:** Requiere Fases 2 y 4 completas (BD + sesión activa).  
-> **Responsable sugerido:** Sergio y Integrante B
+> **Responsable sugerido:** Sergio Murillo e Isaac Posada
 
 ---
 
@@ -236,8 +236,8 @@ Referencia visual: `imgs_project/3.png`
 |---|---|---|---|---|---|
 | 5.2.1 | `[ ]` Agregar formulario en `proyectos.php` (solo visible con sesión) con campos: nombre, ciudad, capacidad_kw, fecha_instalacion, estado | 🔴 Alta | ⚙️ Media | El formulario aparece encima de la tabla cuando hay sesión activa | 5.1.4 |
 | 5.2.2 | `[ ]` El formulario apunta a `action="acciones.php" method="POST"` | 🔴 Alta | ⚙️ Baja | El formulario envía los datos a `acciones.php` | 5.2.1 |
-| 5.2.3 | `[ ]` Crear `acciones.php` con `session_start()` y verificación de sesión | 🔴 Alta | ⚙️ Baja | Si no hay sesión, el archivo hace `exit` inmediatamente | 4.1.3 |
-| 5.2.4 | `[ ]` Implementar lógica CREATE en `acciones.php`: recibir POST, ejecutar INSERT, redirigir | 🔴 Alta | ⚙️⚙️ Media | Al guardar un nuevo proyecto, aparece en la tabla y en la BD | 5.2.3 |
+| 5.2.3 | `[x]` Crear `acciones.php` con `session_start()` y verificación de sesión | 🔴 Alta | ⚙️ Baja | Si no hay sesión, el archivo hace `exit` inmediatamente | 4.1.3 |
+| 5.2.4 | `[x]` Implementar lógica CREATE en `acciones.php`: recibir POST, ejecutar INSERT, redirigir | 🔴 Alta | ⚙️⚙️ Media | Al guardar un nuevo proyecto, aparece en la tabla y en la BD | 5.2.3 |
 
 ---
 
@@ -249,7 +249,7 @@ Referencia visual: `imgs_project/3.png`
 | 5.3.2 | `[ ]` En `proyectos.php`, detectar `$_GET['editar']` y ejecutar `SELECT` para obtener el proyecto | 🔴 Alta | ⚙️ Media | Los datos del proyecto se cargan en la variable `$edit_p` | 5.3.1 |
 | 5.3.3 | `[ ]` El formulario debe prellenarse con `value="<?= $edit_p['campo'] ?>"` cuando `$edit_p` existe | 🔴 Alta | ⚙️ Media | El formulario muestra los datos actuales del proyecto al editar | 5.3.2 |
 | 5.3.4 | `[ ]` Agregar `<input type="hidden" name="id" value="...">` cuando se está editando | 🔴 Alta | ⚙️ Baja | `acciones.php` recibe el `id` del proyecto a actualizar | 5.3.3 |
-| 5.3.5 | `[ ]` Implementar lógica UPDATE en `acciones.php`: si POST tiene `id` → UPDATE, si no → INSERT | 🔴 Alta | ⚙️⚙️ Media | Guardar cambios actualiza el registro correcto en la BD | 5.3.4 |
+| 5.3.5 | `[x]` Implementar lógica UPDATE en `acciones.php`: si POST tiene `id` → UPDATE, si no → INSERT | 🔴 Alta | ⚙️⚙️ Media | Guardar cambios actualiza el registro correcto en la BD | 5.3.4 |
 
 ---
 
@@ -259,7 +259,7 @@ Referencia visual: `imgs_project/3.png`
 |---|---|---|---|---|---|
 | 5.4.1 | `[ ]` El botón "Eliminar" debe redirigir a `acciones.php?eliminar=ID` | 🔴 Alta | ⚙️ Baja | El enlace tiene `href="acciones.php?eliminar=<?= $p['proyecto_id'] ?>"` | 5.1.4 |
 | 5.4.2 | `[ ]` Agregar confirmación JS con `onclick="return confirm('¿Seguro que deseas eliminar?')"` | 🟡 Media | ⚙️ Baja | Un diálogo de confirmación aparece antes de eliminar | 5.4.1 |
-| 5.4.3 | `[ ]` Implementar lógica DELETE en `acciones.php`: si GET tiene `eliminar` → DELETE → redirigir | 🔴 Alta | ⚙️ Media | El proyecto desaparece de la tabla y de la BD tras confirmar | 5.4.2 |
+| 5.4.3 | `[x]` Implementar lógica DELETE en `acciones.php`: si GET tiene `eliminar` → DELETE → redirigir | 🔴 Alta | ⚙️ Media | El proyecto desaparece de la tabla y de la BD tras confirmar | 5.4.2 |
 
 **✅ Definition of Done — Fase 5:**
 - Se puede crear un nuevo proyecto y aparece en la tabla.
@@ -383,8 +383,8 @@ graph LR
 | Integrante | Archivos | Fases |
 |---|---|---|
 | **Sergio** | `config/db.php`, `login.php`, `logout.php`, `acciones.php`, `solarco.sql` | 2, 4, 5 |
-| **Integrante B** | `proyectos.php` | 5 |
-| **Integrante C** | `index.php`, `energia-solar.php`, `css/style.css` | 2, 3 |
-| **Integrante D** | `contacto.php`, `estadisticas.php`, `js/script.js`, `README.md` | 2, 6, 7 |
+| **Isaac Posada** | `proyectos.php` | 5 |
+| **Johnnathan Monsalve** | `index.php`, `energia-solar.php`, `css/style.css` | 2, 3 |
+| **Johan Villalba** | `contacto.php`, `estadisticas.php`, `js/script.js`, `README.md` | 2, 6, 7 |
 
 > Las asignaciones son orientativas. Cada integrante debe leer el `BLUEPRINT.md` completo antes de comenzar su módulo.

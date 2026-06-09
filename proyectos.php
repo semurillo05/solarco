@@ -101,6 +101,7 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                   Filtrar
                 </button>
 
+                <?php if(isset($_SESSION['user_id'])): ?>
                 <button
                     type="button"
                     class="btn-primario"
@@ -108,6 +109,7 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 >
                     + Nuevo Proyecto
                 </button>
+                <?php endif; ?>
 
             </div>
 
@@ -122,7 +124,9 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <th>Capacidad</th>
                     <th>Estado</th>
                     <th>Fecha</th>
+                    <?php if(isset($_SESSION['user_id'])): ?>
                     <th>Acciones</th>
+                    <?php endif; ?>
                 </tr>
             </thead>
 
@@ -169,10 +173,18 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <?= htmlspecialchars($proyecto['fecha_instalacion']); ?>
                     </td>
 
+                    <?php if(isset($_SESSION['user_id'])): ?>
                     <td>
+                        <a
+                            href="#"
+                            class="btnVer"
+                            data-nombre="<?= htmlspecialchars($proyecto['nombre']); ?>"
+                            data-ciudad="<?= htmlspecialchars($proyecto['ciudad']); ?>"
+                            data-capacidad="<?= htmlspecialchars($proyecto['capacidad_kw']); ?>"
+                            data-fecha="<?= htmlspecialchars($proyecto['fecha_instalacion']); ?>"
+                            data-estado="<?= htmlspecialchars($proyecto['estado']); ?>"
+                        >👁</a>
 
-                        <a href="#">👁</a>
-                    
                          &nbsp;
 
                         <a
@@ -197,6 +209,7 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         </a>
 
                     </td>
+                    <?php endif; ?>
 
                 </tr>
 
@@ -288,6 +301,23 @@ $proyectos = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </div>
 
         </div>     
+
+        <!-- MODAL VER PROYECTO -->
+        <div class="modal" id="modalVerProyecto">
+            <div class="modal-contenido">
+                <div class="modal-header">
+                    <h2>Detalles del Proyecto</h2>
+                    <span class="cerrar-modal" id="cerrarModalVer">×</span>
+                </div>
+                <div class="detalle-proyecto" style="padding: 20px; line-height: 2;">
+                    <p><strong>Nombre:</strong> <span id="ver_nombre"></span></p>
+                    <p><strong>Ciudad:</strong> <span id="ver_ciudad"></span></p>
+                    <p><strong>Capacidad:</strong> <span id="ver_capacidad"></span> kW</p>
+                    <p><strong>Fecha de Instalación:</strong> <span id="ver_fecha"></span></p>
+                    <p><strong>Estado:</strong> <span id="ver_estado"></span></p>
+                </div>
+            </div>
+        </div>
 
     </main>
 
@@ -407,6 +437,34 @@ botonesEditar.forEach(function(btn){
 
     });
 
+});
+
+/* LOGICA PARA EL MODAL DE VER DETALLES */
+const modalVerProyecto = document.getElementById('modalVerProyecto');
+const cerrarModalVer = document.getElementById('cerrarModalVer');
+const botonesVer = document.querySelectorAll('.btnVer');
+
+botonesVer.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+        e.preventDefault();
+        modalVerProyecto.classList.add('activo');
+        
+        document.getElementById('ver_nombre').textContent = this.dataset.nombre;
+        document.getElementById('ver_ciudad').textContent = this.dataset.ciudad;
+        document.getElementById('ver_capacidad').textContent = this.dataset.capacidad;
+        document.getElementById('ver_fecha').textContent = this.dataset.fecha;
+        document.getElementById('ver_estado').textContent = this.dataset.estado;
+    });
+});
+
+cerrarModalVer.addEventListener('click', function(){
+    modalVerProyecto.classList.remove('activo');
+});
+
+window.addEventListener('click', function(e){
+    if(e.target === modalVerProyecto){
+        modalVerProyecto.classList.remove('activo');
+    }
 });
 
 </script>

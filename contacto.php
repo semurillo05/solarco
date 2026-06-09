@@ -1,7 +1,7 @@
 <?php
 /**
  * SolarCO - Formulario de Contacto y Registro de Comentarios (Diseño Unificado)
- * Desarrollado por: Integrante D (Johan)
+ * Desarrollado por: Johan Villalba
  * Fecha: Junio 2026
  */
 require_once 'config/db.php';
@@ -21,11 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mensaje_error = "Por favor, ingrese un correo electrónico válido.";
     } else {
         try {
-            $sql = "INSERT INTO comentario (nombre, apellido, email, mensaje, fecha_envio) 
-                    VALUES (:nombre, :apellido, :email, :mensaje, NOW())";
+            $nombre_completo = trim($nombre . ' ' . $apellido);
+            $sql = "INSERT INTO comentario (nombre_remitente, email_remitente, comentario, fecha_envio) 
+                    VALUES (:nombre_completo, :email, :mensaje, NOW())";
             $stmt = $pdo->prepare($sql);
-            $stmt->bindParam(':nombre', $nombre, PDO::PARAM_STR);
-            $stmt->bindParam(':apellido', $apellido, PDO::PARAM_STR);
+            $stmt->bindParam(':nombre_completo', $nombre_completo, PDO::PARAM_STR);
             $stmt->bindParam(':email', $email, PDO::PARAM_STR);
             $stmt->bindParam(':mensaje', $mensaje, PDO::PARAM_STR);
             
