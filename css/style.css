@@ -201,3 +201,274 @@ body {
 a.btn-primario {
     color: var(--blanco);
 }
+
+/* ===== HERO SECUNDARIO ===== */
+.hero-secundario {
+    background-color: #e8e0cc;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.hero-secundario-contenido h1 {
+    font-size: 2.5rem;
+    color: var(--azul-marino);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-secundario-contenido p {
+    color: var(--gris-texto);
+    font-size: 1.1rem;
+}
+
+.hero-sol {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* ===== SERVICIOS ===== */
+.servicios {
+    padding: 4rem 2rem;
+    background-color: var(--fondo);
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tarjeta-servicio {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.tarjeta-icono {
+    font-size: 2rem;
+    background-color: #f5f0e8;
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.tarjeta-servicio h2 {
+    font-size: 1.3rem;
+    color: var(--azul-marino);
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-servicio p {
+    color: var(--gris-texto);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.tarjeta-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.tarjeta-lista li {
+    color: var(--gris-texto);
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+}
+
+.tarjeta-lista li::before {
+    content: "• ";
+    color: var(--amarillo);
+}
+
+/* ===== POR QUE SOLAR ===== */
+.porque-solar {
+    background-color: var(--fondo);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.porque-solar h2 {
+    font-size: 2rem;
+    color: var(--azul-marino);
+    margin-bottom: 2rem;
+}
+
+.porque-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.porque-tarjeta {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.porque-numero {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--amarillo);
+    margin-bottom: 0.5rem;
+}
+
+.porque-label {
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: var(--azul-marino);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.hero-sol {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--amarillo);
+}
+
+/* ===== HERO INICIO ===== */
+.hero {
+    background-color: #e8e0cc;
+    padding: 5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-contenido {
+    max-width: 520px;
+}
+
+.hero-contenido h1 {
+    font-size: 3rem;
+    color: var(--azul-marino);
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-contenido p {
+    color: var(--gris-texto);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--azul-marino);
+    padding: 0.6rem 1.4rem;
+    border: 2px solid var(--azul-marino);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-secundario:hover {
+    background-color: var(--azul-marino);
+    color: var(--blanco);
+}
+
+.hero-imagen {
+    background-color: #d4c9a8;
+    border-radius: 12px;
+    width: 440px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-sol-grande {
+    font-size: 8rem;
+    color: var(--amarillo);
+}
+
+/* ===== BENEFICIOS ===== */
+.beneficios {
+    padding: 5rem 2rem;
+    background-color: var(--fondo);
+    text-align: center;
+}
+
+.beneficios h2 {
+    font-size: 2rem;
+    color: var(--azul-marino);
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.tarjeta-beneficio {
+    background-color: var(--blanco);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: left;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.tarjeta-beneficio h3 {
+    font-size: 1.1rem;
+    color: var(--azul-marino);
+    margin: 1rem 0 0.5rem;
+}
+
+.tarjeta-beneficio p {
+    color: var(--gris-texto);
+    font-size: 0.95rem;
+}
+
+/* ===== BANDA ESTADISTICAS ===== */
+.banda-stats {
+    background-color: var(--azul-marino);
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--amarillo);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--blanco);
+    font-size: 0.95rem;
+}
