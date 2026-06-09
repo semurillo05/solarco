@@ -472,3 +472,214 @@ a.btn-primario {
     color: var(--blanco);
     font-size: 0.95rem;
 }
+
+/* ===== PROYECTOS ===== */
+
+.proyectos-layout{
+    display:flex;
+    gap:20px;
+    padding:30px;
+}
+
+.sidebar-proyectos{
+    width:250px;
+    background:var(--azul-marino);
+    color:white;
+    padding:20px;
+    border-radius:12px;
+    height:fit-content;
+}
+
+.sidebar-proyectos h3{
+    margin-bottom:20px;
+}
+
+.sidebar-proyectos label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+.sidebar-proyectos select{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:6px;
+}
+
+.contenido-proyectos{
+    flex:1;
+}
+
+.toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:20px 0;
+}
+
+.buscador{
+    flex:1;
+    margin-right:15px;
+}
+
+.buscador input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.tabla-proyectos{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.tabla-proyectos th{
+    background:#f3f4f6;
+    color:var(--azul-marino);
+    padding:15px;
+    text-align:left;
+}
+
+.tabla-proyectos td{
+    padding:15px;
+    border-top:1px solid #eee;
+}
+
+.badge{
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.badge-activo{
+    background:#dff5dd;
+    color:#4b7f3a;
+}
+
+.badge-proceso{
+    background:#ffe8b3;
+    color:#b7791f;
+}
+
+.badge-planificacion{
+    background:#e5e7eb;
+    color:#6b7280;
+}
+
+/* ===== TOOLBAR PROYECTOS ===== */
+
+.toolbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:20px;
+    margin:25px 0;
+}
+
+.buscador{
+    flex:1;
+}
+
+.buscador input{
+    width:100%;
+    padding:14px 16px;
+    border:1px solid #dcdcdc;
+    border-radius:10px;
+    background:white;
+    font-size:15px;
+}
+
+.acciones-toolbar{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+.btn-filtrar{
+    background-color: #ffffff;
+    color: var(--azul-marino);
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 12px 20px;
+    min-width: 120px;
+    height: 42px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+.btn-filtrar:hover{
+    background-color: #f5f5f5;
+}
+
+/* ===== MODAL ===== */
+
+.modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+    z-index:9999;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.modal.activo{
+    display:flex;
+}
+
+.modal-contenido{
+    background:#ffffff;
+    width:550px;
+    max-width:95%;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.cerrar-modal{
+    cursor:pointer;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.form-proyecto{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.form-proyecto input,
+.form-proyecto select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.form-proyecto button{
+    margin-top:10px;
+}
